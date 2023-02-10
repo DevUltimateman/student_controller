@@ -1,0 +1,112 @@
+﻿<Window x:Class="OppilasSovellus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OppilasSovellus"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="717" Width="929" WindowStyle="SingleBorderWindow" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="app_icon.png">
+    <Grid Background="#FF181225">
+        <Rectangle HorizontalAlignment="Left" Height="238" Margin="10,129,0,0" Stroke="#FF05BFD3" VerticalAlignment="Top" Width="896" StrokeThickness="3">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FF065D66" Opacity="0.15"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="281" Margin="10,385,0,0" Stroke="#FF05BFD3" StrokeThickness="3" VerticalAlignment="Top" Width="438">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FF065D66" Opacity="0.15"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="281" Margin="466,385,0,0" Stroke="#FF05BFD3" StrokeThickness="3" VerticalAlignment="Top" Width="440">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FF065D66" Opacity="0.15"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="lblTitle" FontSize="55" FontWeight="Bold" Content="Isokunta Oppilaskanta" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="99" Width="896" BorderBrush="#FF05BFD3" BorderThickness="3" Foreground="White">
+            <Label.Background>
+                <SolidColorBrush Color="#FF065D66" Opacity="0.15"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="lblEtu" Content="Etunimi" HorizontalAlignment="Left" Margin="49,160,0,0" VerticalAlignment="Top" Height="32" Width="139" Foreground="#FFF0F0F0" FontSize="18"/>
+        <Label x:Name="lblSuku" Content="Sukunimi" HorizontalAlignment="Left" Margin="466,160,0,0" VerticalAlignment="Top" Height="32" Width="138" Foreground="#FFF0F0F0" FontSize="18"/>
+        <TextBox x:Name="tboxEtu" HorizontalAlignment="Left" Height="30" Margin="247,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" BorderBrush="#FF05BFD3" Foreground="White" SelectionBrush="#FFFF9700" Cursor="Pen">
+            <TextBox.Background>
+                <SolidColorBrush Color="Red" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="tboxSuku" HorizontalAlignment="Left" Height="32" Margin="703,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" BorderBrush="#FF05BFD3" Foreground="White" SelectionBrush="#FFFF9700" Cursor="Pen">
+            <TextBox.Background>
+                <SolidColorBrush Color="Red" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lblSyntymaVuosi" Content="Syntymäpäivä" HorizontalAlignment="Left" Margin="50,229,0,0" VerticalAlignment="Top" Height="32" Width="138" Foreground="#FFF0F0F0" FontSize="18"/>
+        <Label x:Name="lblOsoite" Content="Osoite" HorizontalAlignment="Left" Margin="466,237,0,0" VerticalAlignment="Top" Height="32" Width="138" Foreground="#FFF0F0F0" FontSize="18"/>
+        <Label x:Name="lblPaikkakunta" Content="Paikkakunta" HorizontalAlignment="Left" Margin="49,308,0,0" VerticalAlignment="Top" Height="32" Width="138" Foreground="#FFF0F0F0" FontSize="18"/>
+        <TextBox x:Name="tboxSyntyma" HorizontalAlignment="Left" Height="32" Margin="247,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" BorderBrush="#FF05BFD3" Foreground="White" SelectionBrush="#FFFF9700" OpacityMask="{DynamicResource {x:Static SystemColors.InactiveCaptionBrushKey}}" Cursor="Pen">
+            <TextBox.Background>
+                <SolidColorBrush Color="Red" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="tboxOsoite" HorizontalAlignment="Left" Height="32" Margin="702,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" BorderBrush="#FF05BFD3" Foreground="White" SelectionBrush="#FFFF9700" Cursor="Pen">
+            <TextBox.Background>
+                <SolidColorBrush Color="Red" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+        <Button x:Name="btnAdd" Content="Lisää" HorizontalAlignment="Left" Margin="321,405,0,0" VerticalAlignment="Top" Width="94" Foreground="White" BorderBrush="#FF2EFF00" Click="btnAdd_Click" Height="36" Cursor="Hand">
+            <Button.Background>
+                <SolidColorBrush Color="#FF34DE03" Opacity="0.2"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnRemove" Content="Poista" HorizontalAlignment="Left" Margin="322,610,0,0" VerticalAlignment="Top" Width="94" Foreground="White" BorderBrush="#FFBD0000" Height="36" Click="btnRemove_Click" Cursor="Hand">
+            <Button.Background>
+                <SolidColorBrush Color="Red" Opacity="0.2"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnClear" Content="Tyhjennä" HorizontalAlignment="Left" Margin="321,542,0,0" VerticalAlignment="Top" Width="94" Foreground="White" BorderBrush="#FFFFA200" Click="btnClear_Click" Cursor="Hand" Height="36" RenderTransformOrigin="0.511,0.639">
+            <Button.Background>
+                <SolidColorBrush Color="#FFF9F907" Opacity="0.2"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="tboxPaikkakunta" HorizontalAlignment="Left" Height="32" Margin="246,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" BorderBrush="#FF05BFD3" Foreground="White" SelectionBrush="#FFFF9700" Cursor="Pen" >
+            <TextBox.Background>
+                <SolidColorBrush Color="Red" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lblPostiNumero" Content="Postinumero" HorizontalAlignment="Left" Margin="466,308,0,0" VerticalAlignment="Top" Height="32" Width="138" Foreground="#FFF0F0F0" FontSize="18"/>
+        <TextBox x:Name="tboxPostiNumero" HorizontalAlignment="Left" Height="32" Margin="702,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" BorderBrush="#FF05BFD3" Foreground="White" SelectionBrush="#FFFF9700" Cursor="Pen">
+            <TextBox.Background>
+                <SolidColorBrush Color="Red" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+        <ComboBox x:Name="cBoxOppilaat" Opacity="0.9" HorizontalAlignment="Left" Margin="572,493,0,0" VerticalAlignment="Top" Width="231" Height="43" BorderBrush="#FF02B6C9" BorderThickness="0" DropDownClosed="CBoxOppilaat_DropDownClosed" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Cursor="Hand"/>
+        <Button x:Name="btnTallenaMuutos" Content="Tallenna" HorizontalAlignment="Left" Margin="322,470,0,0" VerticalAlignment="Top" Width="95" Foreground="White" BorderBrush="#FFCEFFFD" IsCancel="True" Click="btnTallenaMuutos_Click" Height="35" Cursor="Hand">
+            <Button.Background>
+                <SolidColorBrush Color="#FF26FFF6" Opacity="0.15"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="lblAdd" Content="Lisää ( Oppilas )" BorderBrush="#FF17A600" BorderThickness="1" HorizontalAlignment="Left" Margin="49,405,0,0" VerticalAlignment="Top" Height="36" Width="245" Foreground="#FFF0F0F0" FontSize="18" FontWeight="Bold">
+            <Label.Background>
+                <SolidColorBrush Color="#FF17A600" Opacity="0"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="lblClear" Content="Tyhjennä kentät" BorderBrush="#FFA68800" BorderThickness="1" HorizontalAlignment="Left" Margin="50,542,0,0" VerticalAlignment="Top" Height="36" Width="244" Foreground="#FFF0F0F0" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="lblSave" Content="Tallenna muutokset" BorderBrush="#FFCEFFFD" BorderThickness="1" HorizontalAlignment="Left" Margin="51,469,0,0" VerticalAlignment="Top" Height="36" Width="244" Foreground="#FFF0F0F0" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="tboxID" Opacity="0" HorizontalAlignment="Left" Height="35" Margin="640,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" BorderBrush="#FFDB7EEA" Foreground="White" SelectionBrush="#FFFF9700">
+            <TextBox.Background>
+                <SolidColorBrush Color="Red" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lblRemoveOppilas" Content="Poista ( Oppilas )" BorderBrush="#FFA60000" BorderThickness="1" HorizontalAlignment="Left" Margin="51,610,0,0" VerticalAlignment="Top" Height="36" Width="244" Foreground="#FFF0F0F0" FontSize="18" FontWeight="Bold"/>
+
+        <Rectangle x:Name="rectOppBox" HorizontalAlignment="Left" Height="3" Margin="572,464,0,0" Stroke="#FF05BFD3" StrokeThickness="3" VerticalAlignment="Top" Width="231">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FF065D66" Opacity="0.15"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="lblOppilasLista" Content="Oppilaslista" HorizontalAlignment="Left" Margin="625,427,0,0" VerticalAlignment="Top" Foreground="#FFECECEC" FontSize="20" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBlock x:Name="tBlockListaInfo" HorizontalAlignment="Left" Height="53" Margin="572,552,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Foreground="#FFEEEEEE"><Run Text="&#x9;&#x9;*Vinkki:"/><LineBreak/><Run Text="   &#x9;Voit valita oppilaan listasta."/><LineBreak/><Run Text="  Voit sen jälkeen muokata oppilaan tietoja."/></TextBlock>
+
+
+
+    </Grid>
+</Window>

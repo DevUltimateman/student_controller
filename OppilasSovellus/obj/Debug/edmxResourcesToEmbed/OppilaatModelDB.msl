@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OppilaatModelStoreContainer" CdmEntityContainer="OppilaatEntities1">
+    <EntitySetMapping Name="Oppilastiedot">
+      <EntityTypeMapping TypeName="OppilaatModel.Oppilastiedot">
+        <MappingFragment StoreEntitySet="Oppilastiedot">
+          <ScalarProperty Name="OnOppilas" ColumnName="OnOppilas" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Etunimi" ColumnName="Etunimi" />
+          <ScalarProperty Name="Sukunimi" ColumnName="Sukunimi" />
+          <ScalarProperty Name="Postinumero" ColumnName="Postinumero" />
+          <ScalarProperty Name="Paikkakunta" ColumnName="Paikkakunta" />
+          <ScalarProperty Name="Osoite" ColumnName="Osoite" />
+          <ScalarProperty Name="Syntymapaiva" ColumnName="Syntymapaiva" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
